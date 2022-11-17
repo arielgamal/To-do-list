@@ -21,7 +21,7 @@ export function App() {
     <div className="App">
       <Header />
         <Table handleTaskList={handleTaskList}  handleTaskInput={handleTaskInput} newTask={newTask}/>
-        <List task={task} />
+        <List task={task} setTask={setTask} />
     </div>
   )
 }

@@ -2,7 +2,13 @@ import styles from "./List.module.css";
 import {ClipboardText} from "phosphor-react";
 import { Task } from "./Task";
 
-export function List({ task }) {
+export function List({ task, setTask }) {
+  function deleteTask(tasktoDelete) {
+    const taskWithoutDeletedOne = task.filter((element) => {
+    return element != tasktoDelete
+    })
+    setTask(taskWithoutDeletedOne);
+  }
 
   return(
     <article>
@@ -22,7 +28,7 @@ export function List({ task }) {
           </div> 
           :
           <div>
-            {task.map((element) => <Task task={element} key={element} />)}
+            {task.map((element) => <Task task={element} key={element} deleteTask={deleteTask} />)}
           </div>
         }
     </article>

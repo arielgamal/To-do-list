@@ -1,8 +1,0 @@
-        <div className={styles.taskList}>
-          <ClipboardText size={40} />
-          <strong> Voce ainda não tem tarefas cadastradas</strong>
-          <p>Crie tarefas e organize seus itens a fazer</p>
-        </div>
-
-
-          <Task task={task} />
