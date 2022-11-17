@@ -2,18 +2,18 @@ import styles from "./List.module.css";
 import {ClipboardText} from "phosphor-react";
 import { Task } from "./Task";
 
-export function List({ comment }) {
+export function List({ task }) {
 
   return(
     <article>
       <div className={styles.tasks}>
         <div className={styles.taskInfo}>
-          <p>Tarefas criadas {comment.length}</p>
+          <p>Tarefas criadas {task.length}</p>
           <p>Tarefas concluidas 0</p>
         </div>
       </div>
         {
-          comment.length === 0 
+          task.length === 0 
           ?
           <div className={styles.taskList}>
             <ClipboardText size={40} />
@@ -22,7 +22,7 @@ export function List({ comment }) {
           </div> 
           :
           <div>
-          <Task />
+            {task.map((element) => <Task task={element} key={element} />)}
           </div>
         }
     </article>

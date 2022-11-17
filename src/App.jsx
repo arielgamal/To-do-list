@@ -5,13 +5,23 @@ import { Table } from "./components/Table"
 import "./global.css"
 
 export function App() {
-  const [comment, setComment] = useState(["OI"]);
+  const [newTask, setNewTask] = useState("");
+  const [task, setTask] = useState([]);
+
+  function handleTaskInput({target}) {
+    setNewTask(target.value)
+  }
+
+  function handleTaskList() {
+    setTask((prev) => ([ ...prev, newTask]));
+    setNewTask("");
+  }
 
   return (
     <div className="App">
       <Header />
-        <Table />
-        <List comment={comment} />
+        <Table handleTaskList={handleTaskList}  handleTaskInput={handleTaskInput} newTask={newTask}/>
+        <List task={task} />
     </div>
   )
 }

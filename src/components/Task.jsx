@@ -1,11 +1,11 @@
 import styles from "./Task.module.css";
 import {Trash} from "phosphor-react";
 
-export function Task() {
+export function Task({task}) {
   return (
     <div className={styles.tasks}>
       <input type="radio" />
-      <p>Ir no supermercado</p>
+      <p>{task}</p>
       <button>
         <Trash />
       </button>

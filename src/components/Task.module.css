@@ -11,7 +11,7 @@
 }
 
 .tasks + .tasks {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .tasks input {
