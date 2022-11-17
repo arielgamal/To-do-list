@@ -1,0 +1,14 @@
+.tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 46rem;
+  height: 2rem;
+}
