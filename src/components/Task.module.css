@@ -1,0 +1,23 @@
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-300);
+  color: var(--gray-200);
+  width: 46rem;
+  height: 4rem;
+  border-radius: 8px;
+}
+
+.tasks + .tasks {
+  margin-top: 2rem;
+}
+
+.tasks input {
+  margin-left: 1rem;
+}
+
+.tasks button {
+  margin-right: 1rem;
+}
