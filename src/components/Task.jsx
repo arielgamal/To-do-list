@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 export function Task({ task, deleteTask, done, setDone }) {
   const [check, setCheck] = useState(false);
   function handleDelete() {
+    if (check) {
+      const changedDone = done.filter((e) => e !== task)
+      setDone(changedDone);
+    }
     deleteTask(task)
   }
 
