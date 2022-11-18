@@ -28,3 +28,11 @@ article {
   flex-direction: column;
   align-items: center;
 }
+
+.p1 {
+  color: var(--blue);
+}
+
+.p2 {
+  color: var(--purple);
+}

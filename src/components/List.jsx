@@ -1,8 +1,11 @@
 import styles from "./List.module.css";
 import {ClipboardText} from "phosphor-react";
 import { Task } from "./Task";
+import { useState } from "react";
 
 export function List({ task, setTask }) {
+  const [done, setDone] = useState([]);
+
   function deleteTask(tasktoDelete) {
     const taskWithoutDeletedOne = task.filter((element) => {
     return element != tasktoDelete
@@ -14,8 +17,8 @@ export function List({ task, setTask }) {
     <article>
       <div className={styles.tasks}>
         <div className={styles.taskInfo}>
-          <p>Tarefas criadas {task.length}</p>
-          <p>Tarefas concluidas 0</p>
+          <p className={styles.p1}>Tarefas criadas {task.length}</p>
+          <p className={styles.p2}>Concluidas {done.length} de {task.length}</p>
         </div>
       </div>
         {
@@ -28,7 +31,7 @@ export function List({ task, setTask }) {
           </div> 
           :
           <div>
-            {task.map((element) => <Task task={element} key={element} deleteTask={deleteTask} />)}
+            {task.map((element) => <Task task={element} key={element} deleteTask={deleteTask} done={done} setDone={setDone} />)}
           </div>
         }
     </article>
