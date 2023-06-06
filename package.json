@@ -1,15 +1,15 @@
 {
+  "homepage": "https://arielgamal.github.io/To-do-list",
   "name": "todo-list",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://arielgamal.github.io/To-do-list/",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "phosphor-react": "^1.4.1",
